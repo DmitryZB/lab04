@@ -7,20 +7,21 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v3
-      
-      - name: formatter_lib
-        shell: bash
-        run: |
-         cd formatter_lib/
-         cmake -H. -B_build
-         cmake --build _build
+         
+         
+#       - name: formatter_lib
+#         shell: bash
+#         run: |
+#          cd formatter_lib/
+#          cmake -H. -B_build
+#          cmake --build _build
         
-      - name: formatter_ex_lib
-        shell: bash
-        run: |
-         cd formatter_lib/
-         cmake -H. -B_build
-         cmake --build _build
+#       - name: formatter_ex_lib
+#         shell: bash
+#         run: |
+#          cd formatter_lib/
+#          cmake -H. -B_build
+#          cmake --build _build
         
       - name: hw_app
         shell: bash
@@ -30,11 +31,11 @@ jobs:
          make
          ./hw
         
-      - name: solver_app
-        shell: bash
-        run: |
-          cd solver_application/
-          cmake CMakeLists.txt
-          make
-          ./solver
+#       - name: solver_app
+#         shell: bash
+#         run: |
+#           cd solver_application/
+#           cmake CMakeLists.txt
+#           make
+#           ./solver
         
